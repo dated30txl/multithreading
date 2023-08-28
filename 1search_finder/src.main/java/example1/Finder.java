@@ -9,6 +9,7 @@ public class Finder {
           for(int i = 1; i< data.size(); i++){
               T item = data.get(i);
               if(condition.test(item, result)) result = item;
+              //result = condition.test(item, result) ? item : result;
           }
           return result;
     }
