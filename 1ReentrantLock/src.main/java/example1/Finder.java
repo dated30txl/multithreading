@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.BiPredicate;
 
 public class Finder {
-    private static <T extends Comparable<T>> T finder(List<T> data, BiPredicate<T, T> condition){
+    public static <T extends Comparable<T>> T finder(List<T> data, BiPredicate<T, T> condition){
           T result = data.get(0);
           for(int i = 1; i< data.size(); i++){
               T item = data.get(i);

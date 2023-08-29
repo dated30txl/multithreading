@@ -17,9 +17,9 @@ public class ClassThread {
         System.out.printf("Priority: %s\n", t.getPriority());
         t.setPriority(1);
         System.out.printf("New priority: %s\n", t.getPriority()); //1
-
         System.out.printf("Активний(isAlive)?: %s\n", t.isAlive()); // true потік активний
         System.out.printf("Перервано?(isInterrupted)?: %s\n", t.isInterrupted());//false потік не перервано
+
         System.out.println("thread-1 finished...");
 
     }
