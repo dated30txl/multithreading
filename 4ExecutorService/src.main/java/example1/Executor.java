@@ -14,7 +14,9 @@ public class Executor {
                 Arrays.asList(1, 5, 97, 6, 4),
                 Arrays.asList(10, 5, 7, 46, 4),
                 Arrays.asList(1, 5, 71, 6, 41));
+
         ExecutorService es = Executors.newFixedThreadPool(4);
+
         List<Future<Integer>> futures = new ArrayList<>();
 
         for (List<Integer>l1: ll){
@@ -25,6 +27,11 @@ public class Executor {
         for (Future<Integer> future: futures){
             System.out.println(future.get());
         }
+
+        System.out.println(ll.parallelStream()
+                .map(
+                        (l)->Collections.max(l, Integer::compare)
+                ).toList());
 
         System.exit(0);
     }
