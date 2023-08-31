@@ -7,3 +7,59 @@ Parallel programming a selection of basic examples in JAVA
 - [Synchronized](https://github.com/yourhostel/multithreading/tree/main/3Synchronized/src.main/java/example1)
 - [Executor](https://github.com/yourhostel/multithreading/tree/main/4ExecutorService/src.main/java/example1)
 - [ThreadLocal](https://github.com/yourhostel/multithreading/tree/main/5ThreadLocal/src.main/java/example1)
+
+
+- [ ] Багатопоточність – це здатність програми виконувати безліч операцій одночасно. У Java для реалізації багатопоточності використовуються потоки, які представлені класом `Thread` та інтерфейсом `Runnable`.
+- Створення потоку через наслідування від `Thread`:
+```
+class MyThread extends Thread {
+    public void run() {
+        // код, який буде виконуватися в потоці
+    }
+}
+
+MyThread thread = new MyThread();
+thread.start();
+```
+- Використання лямбда-виразу або анонімного класу:
+```
+Thread thread = new Thread(() -> {
+    // код, який буде виконуватися в потоці
+});
+thread.start();
+
+```
+- Створення потоку через реалізацію інтерфейсу `Runnable`:
+```
+class MyRunnable implements Runnable {
+    public void run() {
+        // код, який буде виконуватися в потоці
+    }
+}
+Thread thread = new Thread(new MyRunnable());
+```
+- `Callable<V>` і `Future<V>` абстракція для потоків в Java, яка дозволяє нам не просто виконувати код в окремому потоці, але й отримувати результат його виконання:
+```
+class MyCallable implements Callable<Integer> {
+    @Override
+    public Integer call() throws Exception {
+        // код, який буде виконуватися в потоці
+        return 123;  // Припустимо, ми повертаємо яке-небудь числове значення
+    }
+}
+```
+- Аби виконати Callable, потрібно скористатися `ExecutorService`:
+```
+ExecutorService executor = Executors.newSingleThreadExecutor();
+
+Future<Integer> future = executor.submit(new MyCallable());
+
+try {
+    Integer result = future.get();  // чекаємо результат
+    System.out.println(result);
+} catch (ExecutionException | InterruptedException e) {
+    e.printStackTrace();
+}
+
+executor.shutdown();
+``` 
