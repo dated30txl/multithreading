@@ -4,8 +4,7 @@ public class Example2 {
     private static int x = 0, y = 0;
     private static int a = 0, b = 0;
 
-    public static void main(String[] args) throws InterruptedException {
-        // Синхронізація на рівні класу, тому що у нас статичний контекст
+    public static String executeThreadsAndGetResult() throws InterruptedException {
         synchronized (Example2.class) {
             a = 0;
             b = 0;
@@ -38,6 +37,9 @@ public class Example2 {
         p.join();
         q.join();
 
-        System.out.println("x=" + x + ", y=" + y);
+        return "x=" + x + ", y=" + y;
+    }
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println(executeThreadsAndGetResult());
     }
 }
