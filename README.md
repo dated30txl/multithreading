@@ -1,13 +1,13 @@
 # multithreading
 Parallel programming a selection of basic examples in JAVA
 
-- [Base](https://github.com/yourhostel/multithreading/tree/main/0base/src.main/java/example1)
-- [ReentrantLock](https://github.com/yourhostel/multithreading/tree/main/1ReentrantLock/src.main/java/example1)
-- [Sleep](https://github.com/yourhostel/multithreading/tree/main/2sleep/src.main/java/example1)
-- [Synchronized](https://github.com/yourhostel/multithreading/tree/main/3Synchronized/src.main/java/example1)
-- [Executor](https://github.com/yourhostel/multithreading/tree/main/4ExecutorService/src.main/java/example1)
-- [ThreadLocal](https://github.com/yourhostel/multithreading/tree/main/5ThreadLocal/src.main/java/example1)
-
+- [Base](https://github.com/yourhostel/multithreading/tree/main/0base/src.main/java)
+- [ReentrantLock](https://github.com/yourhostel/multithreading/tree/main/1ReentrantLock/src.main/java)
+- [Sleep](https://github.com/yourhostel/multithreading/tree/main/2sleep/src.main/java)
+- [Synchronized](https://github.com/yourhostel/multithreading/tree/main/3Synchronized/src.main/java)
+- [Executor](https://github.com/yourhostel/multithreading/tree/main/4ExecutorService/src.main/java)
+- [ThreadLocal](https://github.com/yourhostel/multithreading/tree/main/5ThreadLocal/src.main/java)
+- [Semaphore](https://github.com/yourhostel/multithreading/tree/main/6Semaphore/src.main/java)
 
 ### Багатопоточність 
  це здатність програми виконувати безліч операцій одночасно. У Java для реалізації багатопоточності використовуються потоки, які представлені класом `Thread` та інтерфейсом `Runnable`.

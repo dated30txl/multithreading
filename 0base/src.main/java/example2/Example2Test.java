@@ -18,12 +18,13 @@ public class Example2Test {
         }
 
         // Перевіримо, чи ми отримали всі можливі комбінації результатів
-        //в теорії комбінація x=0, y=0 є неможливою,
+        // в теорії комбінація x=0, y=0 є неможливою,
 
         assertTrue("x=0, y=0 was not observed", observedResults.contains("x=0, y=0"));
 
         // але тест іноді показує зворотне, що може бути викликане
         // при оптимізації на рівні компілятора, або процесора що може змінити порядок операцій
+        // на багатоядерній архітектурі
 
         assertTrue("x=1, y=0 was not observed", observedResults.contains("x=1, y=0"));
         assertTrue("x=0, y=1 was not observed", observedResults.contains("x=0, y=1"));
