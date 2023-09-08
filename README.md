@@ -10,6 +10,7 @@ Parallel programming a selection of basic examples in JAVA
 - [Semaphore](https://github.com/yourhostel/multithreading/tree/main/6Semaphore)
 - [CountDownLatch](https://github.com/yourhostel/multithreading/tree/main/7CountDownLatch)
 - [CyclicBarrier](https://github.com/yourhostel/multithreading/tree/main/8CyclicBarrier)
+- [Exchanger](https://github.com/yourhostel/multithreading/tree/main/9Exchanger)
 
 ### Багатопоточність 
  це здатність програми виконувати безліч операцій одночасно. У Java для реалізації багатопоточності використовуються потоки, які представлені класом `Thread` та інтерфейсом `Runnable`.
